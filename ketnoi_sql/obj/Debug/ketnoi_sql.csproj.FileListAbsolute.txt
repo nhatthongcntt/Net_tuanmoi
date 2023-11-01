@@ -1,0 +1,8 @@
+E:\LuuDuLieuSinhVien\2001190840_LeHoangNhatThong\ketnoi_sql\ketnoi_sql\bin\Debug\ketnoi_sql.exe.config
+E:\LuuDuLieuSinhVien\2001190840_LeHoangNhatThong\ketnoi_sql\ketnoi_sql\bin\Debug\ketnoi_sql.exe
+E:\LuuDuLieuSinhVien\2001190840_LeHoangNhatThong\ketnoi_sql\ketnoi_sql\bin\Debug\ketnoi_sql.pdb
+E:\LuuDuLieuSinhVien\2001190840_LeHoangNhatThong\ketnoi_sql\ketnoi_sql\obj\Debug\ketnoi_sql.Form1.resources
+E:\LuuDuLieuSinhVien\2001190840_LeHoangNhatThong\ketnoi_sql\ketnoi_sql\obj\Debug\ketnoi_sql.Properties.Resources.resources
+E:\LuuDuLieuSinhVien\2001190840_LeHoangNhatThong\ketnoi_sql\ketnoi_sql\obj\Debug\ketnoi_sql.csproj.GenerateResource.Cache
+E:\LuuDuLieuSinhVien\2001190840_LeHoangNhatThong\ketnoi_sql\ketnoi_sql\obj\Debug\ketnoi_sql.exe
+E:\LuuDuLieuSinhVien\2001190840_LeHoangNhatThong\ketnoi_sql\ketnoi_sql\obj\Debug\ketnoi_sql.pdb

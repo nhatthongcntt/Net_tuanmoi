@@ -1,0 +1,66 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace ketnoi_sql
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        Modify modify = new Modify();
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.DataSource = modify.Table("Select * from HangHoa");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+
+        private void comboBox_Ten_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBox_Ten.SelectedIndex == 0)
+                {
+                    textBox_NuocSX.Text = "Nga";
+                }
+                if (comboBox_Ten.SelectedIndex == 1)
+                {
+                    textBox_NuocSX.Text = "Anh";
+                }
+                if (comboBox_Ten.SelectedIndex == 2)
+                {
+                    textBox_NuocSX.Text = "Mỹ";
+                }
+                if (comboBox_Ten.SelectedIndex == 3)
+                {
+                    textBox_NuocSX.Text = "Nhật";
+                }
+                if (comboBox_Ten.SelectedIndex == 4)
+                {
+                    textBox_NuocSX.Text = "Ý";
+                }
+            }
+            catch(Exception ex){
+
+            }
+        }
+
+
+    }
+}

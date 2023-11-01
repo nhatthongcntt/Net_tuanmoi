@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace ketnoi_sql
+{
+    class HangHoa
+    {
+        private string _tenHH;
+
+        public string TenHH
+        {
+            get { return _tenHH; }
+            set { _tenHH = value; }
+        }
+         private string _nuocSX;
+         private int _soLuong;
+         private double _giaTien;
+    }
+}

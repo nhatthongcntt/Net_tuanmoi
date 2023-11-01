@@ -1,0 +1,102 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
+
+namespace ketnoi_sql
+{
+    public partial class Form1 : Form
+    {
+        public Form1()
+        {
+            InitializeComponent();
+        }
+        Modify modify = new Modify();
+        HangHoa hanghoa;
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                dataGridView1.DataSource = modify.Table("Select * from HangHoa");
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi: "+ex.Message);
+            }
+        }
+
+        private void KTcomboBox_Ten(object sender, EventArgs e)
+        {
+            try
+            {
+                if (comboBox_Ten.SelectedIndex == 0)
+                {
+                    textBox_NuocSX.Text = "Việt Nam";
+                    textBox_GiaTien.Text = "20000";
+                }
+                if (comboBox_Ten.SelectedIndex == 1)
+                {
+                    textBox_NuocSX.Text = "Anh";
+                    textBox_GiaTien.Text = "30000";
+                }
+                if (comboBox_Ten.SelectedIndex == 2)
+                {
+                    textBox_NuocSX.Text = "Việt Nam";
+                    textBox_GiaTien.Text = "5000";
+                }
+            }
+            catch(Exception ex){
+                MessageBox.Show("Lỗi: "+ex.Message);
+            }
+        }
+
+        private void textBox_SoLuong_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (char.IsDigit(e.KeyChar) || char.IsControl(e.KeyChar))
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+            }
+        }
+        private void Reset()
+        {
+            comboBox_Ten.SelectedIndex = -1;
+            textBox_SoLuong.Text = "";
+        }
+        private bool KiemTra_truockhithem(){
+            if(comboBox_Ten.SelectedIndex==-1){
+                MessageBox.Show("hãy chọn hàng hóa");
+                return false;
+            }
+            if(textBox_SoLuong.Text == ""){
+                MessageBox.Show("hãy nhập số lượng");
+                return false;
+            }
+            return true;
+        }
+        private void getValues()
+        {
+            string _tenHH= comboBox_Ten.Text;
+            string _nuocSX = textBox_NuocSX.Text;
+            int _giatien = int.Parse(textBox_GiaTien.Text);
+            double _soluong = int.Parse(textBox_SoLuong.Text);
+            hanghoa = new HangHoa(_tenHH,_nuocSX,_giatien,_soluong);
+        }
+        private void button_Them_Click(object sender, EventArgs e)
+        {
+            if()
+        }
+
+
+    }
+}
